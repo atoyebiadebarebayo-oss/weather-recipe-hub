@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Base & Reset Styles
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ==========================================================================
+   Header & Weather Widget
+   ========================================================================== */
+.app-header {
+    background-color: #1e293b;
+    color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.weather-widget {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #334155;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+#weather-icon {
+    font-size: 1.4rem;
+    color: #f59e0b;
+}
+
+/* ==========================================================================
+   Search & Controls Section
+   ========================================================================== */
+.search-section {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+#search-form {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#search-input:focus {
+    border-color: #2563eb;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#search-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+#search-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: #10b981;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #059669;
+}
+
+/* ==========================================================================
+   Weather Banner & Suggestions
+   ========================================================================== */
+.weather-banner {
+    background-color: #e0f2fe;
+    border-left: 5px solid #0284c7;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.weather-banner h3 {
+    color: #0369a1;
+    margin-bottom: 5px;
+}
+
+/* ==========================================================================
+   Recipe Grid & Cards
+   ========================================================================== */
+.recipes-section h2 {
+    margin-bottom: 20px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.recipe-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.recipe-card-body {
+    padding: 16px;
+}
+
+.recipe-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   Modal Popup
+   ========================================================================== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 1.8rem;
+    cursor: pointer;
+}

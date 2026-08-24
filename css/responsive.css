@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Mobile & Tablet Responsive Styles
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Center header elements and space them cleanly */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .app-header h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Stack search form elements vertically */
+    .search-section {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    #search-form {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    #search-input, 
+    #search-btn, 
+    .btn-secondary {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Keep recipe cards full width on mobile screens */
+    .recipe-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Prevent modal popups from overflowing mobile screens */
+    .modal-content {
+        width: 92%;
+        max-height: 80vh;
+        padding: 16px;
+        margin: 10px;
+    }
+
+    .modal-content img {
+        height: 180px;
+    }
+}
